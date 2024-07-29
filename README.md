@@ -22,13 +22,13 @@
 - To Build image
 
 ```cmd
-docker build -t python_task .
+docker build -t task_file .
 ```
 
 - To run the docker image that you created above
 
 ```cmd
-docker run python_task
+docker run task_file
 ```
 
 #### Test File
@@ -36,11 +36,11 @@ docker run python_task
 - To Build image
 
 ```cmd
-docker build -t python_test .
+docker build -t test_file .
 ```
 
 - To run the docker image that you created above
 
 ```cmd
-docker run python_test
+docker run test_file
 ```

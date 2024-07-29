@@ -7,7 +7,7 @@ class TestOrderDataGeneration(unittest.TestCase):
 
     def setUp(self):
         # Run before each test
-        self.file_path =  r'test//orders.csv'  # Provide the actual absolute path
+        self.file_path =  'orders.csv'  
         self.generated_data = pd.read_csv(self.file_path)
 
     def tearDown(self):

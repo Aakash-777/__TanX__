@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Reading the CSV file
-df = pd.read_csv(r"task\\orders.csv")
+df = pd.read_csv("orders.csv")
 
 # Converting 'order_date' column to datetime type
 df["order_date"] = pd.to_datetime(df["order_date"])
