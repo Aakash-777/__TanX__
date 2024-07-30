@@ -8,39 +8,57 @@
   dataset.
 - Identify the top 10 customers by revenue generated.
 
-### Folder structure
+### Project structure
 
-- Test Folder consists of Test File
-- Task Folder consists of main file which is task_script.py
+This repository contains the following files:
 
-### Instuction to run test and task folder
+- `task.py`: A script that reads data from `orders.csv` and extracts data according to the assigned task.
+- `test.py`: A script that uses `unittest` to test the functionality of `task.py`.
+- `dockerfile`: A Dockerfile for creating a Docker image to run the project and its tests.
+- `requirements.txt`: A file listing the Python dependencies.
+- `orders.csv`: Sample csv file.
+- `Testing_notebook.ipynb`: An interactive jupyter notebook for testing and experimenting with the code.
 
-`Note: Since the required dataset was not provided, we sourced a suitable dataset from Kaggle to continue with the project. To use your own dataset, simply replace the orders.csv file with your own CSV data in the respective folders.`
+### Instuction to setup the Project
 
-#### Task File
+`Note: Since the required dataset was not provided, we sourced a suitable dataset from Kaggle to continue with the project. To use your own dataset, simply replace the orders.csv file with your own CSV data.`
 
-- To Build image
+### Using Docker Hub
+The Docker images are available on Docker Hub. Use the following commands to pull and run the images: 
 
+1.  **Run the Main task file**:
+   
 ```cmd
-docker build -t task_file .
+docker pull aakash77703/tanx_task:latest
+docker run --rm aakash77703/tanx_task:latest python task.py
 ```
 
-- To run the docker image that you created above
+2. **Run the test file**:
 
-```cmd
-docker run task_file
-```
+ ```cmd
+ docker pull aakash77703/tanx_task:latest
+ docker run --rm aakash77703/tanx_task:latest python test.py
+ ```
+ <p>Link : https://hub.docker.com/repository/docker/aakash77703/tanx_task/general</p>
 
-#### Test File
+ ### Using Local Setup (Alternate Method)
 
-- To Build image
+1. Clone the repository:
 
-```cmd
-docker build -t test_file .
-```
-
-- To run the docker image that you created above
-
-```cmd
-docker run test_file
-```
+   ```cmd
+   git clone https://github.com/Aakash-777/__TanX__
+   cd https://github.com/Aakash-777/__TanX__
+   ```
+2. Install the dependencies:
+   
+   ```cmd
+   pip install -r requirements.txt
+   ```
+3. Run `task.py`:
+    ```cmd
+   python task.py
+   ```
+4. Run `test.py`:
+    ```cmd
+   python test.py
+   ```
